@@ -1,0 +1,27 @@
+/****** General ***********/
+*{
+  font-family: roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/****** police ***********/
+.logo{
+  font-family: Shrikhand, serif;
+
+}
+img{
+  object-fit: contain;
+}
+
+.card-restaurant{
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+  .card-restaurant-img {
+    width: 100%;
+      &__img{
+        height: 50px;
+      }
+  }
+}

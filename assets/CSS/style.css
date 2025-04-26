@@ -1,3 +1,28 @@
+/****** General ***********/
+* {
+  font-family: roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+/****** police ***********/
+.logo {
+  font-family: Shrikhand, serif;
+}
 
-/*# sourceMappingURL=style.css.map */
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-restaurant {
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+}
+.card-restaurant .card-restaurant-img {
+  width: 100%;
+}
+.card-restaurant .card-restaurant-img__img {
+  height: 50px;
+}/*# sourceMappingURL=style.css.map */
