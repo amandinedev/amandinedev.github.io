@@ -1,3 +1,40 @@
-<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z" stroke="#101010"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="23"
+   height="21"
+   viewBox="0 0 23 21"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="heart.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="36.809524"
+     inkscape:cx="11.491591"
+     inkscape:cy="10.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M12.7205 2.40527C14.6597 0.222558 17.7055 -0.147219 19.822 1.62402L20.0242 1.80176C22.4405 4.05164 22.6445 8.0625 20.615 10.6074L20.4119 10.8496L12.0974 20.2148C11.7805 20.5716 11.3019 20.5941 10.9646 20.2822L10.8992 20.2148L2.58472 10.8496C0.41497 8.40259 0.476223 4.38556 2.74976 2.02539L2.97632 1.80176C5.03088 -0.108075 8.08405 0.134683 10.0886 2.19922L10.28 2.40527L11.1267 3.35742L11.5007 3.77734L11.8738 3.35742L12.7205 2.40527Z"
+     stroke="#101010"
+     id="path1"
+     style="fill:#ffffff;fill-opacity:1" />
 </svg>

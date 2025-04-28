@@ -1,28 +1,166 @@
 /****** General ***********/
 * {
-  font-family: roboto, sans-serif;
+  font-family: roboto, medium, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/****** police ***********/
+/****** variables ***********/
+/*media-queries*/
+/*colors*/
+/****** elements ***********/
 .logo {
   font-family: Shrikhand, serif;
 }
+.logo--black {
+  color: #101010;
+  font-size: 30px;
+}
+.logo--white {
+  font-size: 18px;
+}
+
+.section__title {
+  color: #101010;
+  font-size: 24px;
+  padding-top: 30px;
+}
 
 img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/****** mobile first ***********/
+/****** header ***********/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 113px;
+}
+
+.logo--black {
+  height: 63px;
+  align-content: center;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  gap: 17px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #EAEAEA;
+}
+.location__img {
+  height: 16px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #EAEAEA;
+}
+.restaurants .cards-restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .card-restaurant {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: 251px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #FFFFFF;
 }
 .card-restaurant .card-restaurant-img {
+  position: relative;
   width: 100%;
+  height: 70%;
 }
 .card-restaurant .card-restaurant-img__img {
-  height: 50px;
+  position: relative;
+  -o-object-position: bottom;
+     object-position: bottom;
+  width: 100%;
+  height: 177px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card-restaurant .card-restaurant-img__badge {
+  position: absolute;
+  right: 4%;
+  top: 7%;
+  z-index: 1;
+  font-size: 14px;
+  padding: 7.5px;
+  border-radius: 2px;
+  color: #008766;
+  background-color: #99E2D0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.la-note-enchantee .card-restaurant-img img {
+  -o-object-position: center 61%;
+     object-position: center 61%;
+}
+
+.card-restaurant-content {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+  padding: 15px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.card-restaurant-content-text {
+  display: flex;
+  flex-direction: column;
+}
+.card-restaurant-content-text__title {
+  font-size: 18px;
+}
+.card-restaurant-content-text__subtitle {
+  font-size: 17px;
+  font-weight: 300;
+}
+.card-restaurant-content__like {
+  position: relative;
+  opacity: 1;
+  height: 20px;
+}
+.card-restaurant-content__like:hover {
+  opacity: 0;
+  transition: opacity 0s;
+}
+.card-restaurant-content__liked {
+  opacity: 0;
+  position: absolute;
+  right: 15px;
+  height: 20px;
+}
+.card-restaurant-content__liked:hover {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+@media (min-width: 768.1px) {
+  body {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+  }
+  .location {
+    box-shadow: none;
+  }
 }/*# sourceMappingURL=style.css.map */
