@@ -30,9 +30,11 @@
   background: linear-gradient(#FF79DA, #9356DC);
   border-style: none;
   border-radius: 25px;
+  font-size: 16px;
   color: #FFFFFF;
   height: 50px;
   width: 70%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 img {
