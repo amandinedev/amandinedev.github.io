@@ -3,7 +3,8 @@
 
 /****** General ***********/
 *{
-  font-family: roboto, medium, sans-serif;
+  font-family: roboto, sans-serif;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
@@ -23,6 +24,7 @@ $tertiary-color: #99E2D0;
 $tertiary-darken-color: #008766;
 $location-bg-color:#EAEAEA;
 $main-bg-color:#F6F6F6;
+$footer-bg-color:#353535;
 $gradient-pink: linear-gradient($secondary-color, $primary-color);
 
 
@@ -204,6 +206,7 @@ header{
   }
 }
 
+/*images specific display*/
 .la-note-enchantee .card-restaurant-img img{
   object-position: center 61% ;
 }
@@ -228,6 +231,7 @@ header{
   flex-direction: column;
    &__title{
     font-size: 18px;
+    font-weight: 700;
    }
    &__subtitle{
     font-size: 17px;
@@ -255,6 +259,44 @@ header{
   }
 }
 
+/****** footer ***********/
+footer{
+  background-color: $footer-bg-color;
+  display: flex;
+  flex-direction: column;
+  padding:22px 25px;
+  gap: 16px;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  a{
+    display: flex;
+    gap: 9px;
+    color: $white;
+    text-decoration: none;
+    align-items: center;
+    img{
+      object-fit: none;
+      height: 13px;
+    }
+  }
+  &__container-one{
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+  }
+  &__container-two{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    a{
+    font-weight:400;
+    }
+  }
+}
 
 
 @media (min-width: #{$breakpoint-small+0.1}) {
