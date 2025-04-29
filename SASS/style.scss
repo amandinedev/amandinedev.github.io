@@ -27,6 +27,17 @@ $main-bg-color:#F6F6F6;
 $footer-bg-color:#353535;
 $gradient-pink: linear-gradient($secondary-color, $primary-color);
 
+/****** mixins ***********/
+@mixin pink-button-mixin($width:218px){
+  background: $gradient-pink;
+  border-style: none;
+  border-radius: 25px;
+  color: $white;
+  font-size: 16px;
+  height: 50px;
+  width: $width;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
 
 
 /****** elements ***********/
@@ -49,14 +60,7 @@ $gradient-pink: linear-gradient($secondary-color, $primary-color);
 }
 
 .button--pink{
-  background: $gradient-pink;
-  border-style: none;
-  border-radius: 25px;
-  color: $white;
-  font-size: 16px;
-  height: 50px;
-  width: 65%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  @include pink-button-mixin($width:218px);
 }
 
 img{
