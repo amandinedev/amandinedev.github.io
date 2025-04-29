@@ -35,7 +35,7 @@ $gradient-pink: linear-gradient($secondary-color, $primary-color);
     font-size: 30px;
   }
   &--white{
-    // color: $white;
+    color: $white;
     font-size: 18px;
   }
 }
@@ -43,7 +43,7 @@ $gradient-pink: linear-gradient($secondary-color, $primary-color);
 .section__title{
   color: $dark;
   font-size: 24px;
-  padding-top: 30px ;
+  padding-top: 50px ;
 }
 
 .button--pink{
@@ -51,8 +51,10 @@ $gradient-pink: linear-gradient($secondary-color, $primary-color);
   border-style: none;
   border-radius: 25px;
   color: $white;
+  font-size: 16px;
   height: 50px;
-  width: 70%;
+  width: 65%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 img{
@@ -93,8 +95,8 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 40px 20px;
-  gap: 20px;
+  padding: 30px 20px 50px 20px;
+  gap: 18px;
   background-color: $main-bg-color;
   &__title{
     text-align: center;
@@ -106,19 +108,65 @@ header{
     font-weight: 300;
   }
 }
+/****** how ***********/
+.how{
+  display: flex;
+  flex-direction: column;
+  padding: 0 17.5px;
+  gap: 25px;
+}
+
+.cards-how{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 50px;
+  padding-left: 12px;
+  
+  .card-how{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: $main-bg-color;
+    height: 72.38px;
+    padding: 0 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    &__icon--mobile{
+        height: 20px;
+      }
+    &__icon--list{
+        height: 16px;
+      }
+    &__icon--store{
+        height: 18px;
+      }
+    &__number{
+      position:absolute;
+      left:18px;
+      font-size: 14.18px;
+      color: $white;
+      background-color: $primary-color;
+      border-radius: 25px;
+      padding: 3.6px 8px;
+    }
+  }
+}
 
 /****** restaurants ***********/
 .restaurants{
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+  padding-bottom: 50px;
   background-color: $main-bg-color;
   .cards-restaurants {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
   }
 }
 .card-restaurant{
@@ -158,6 +206,14 @@ header{
 
 .la-note-enchantee .card-restaurant-img img{
   object-position: center 61% ;
+}
+
+.a-la-francaise .card-restaurant-img__badge{
+  display: none;
+}
+
+.le-delice-des-sens .card-restaurant-img__badge{
+  display: none;
 }
   
 .card-restaurant-content {

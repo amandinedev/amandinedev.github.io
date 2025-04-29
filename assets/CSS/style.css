@@ -17,23 +17,24 @@
   font-size: 30px;
 }
 .logo--white {
+  color: #FFFFFF;
   font-size: 18px;
 }
 
 .section__title {
   color: #101010;
   font-size: 24px;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 .button--pink {
   background: linear-gradient(#FF79DA, #9356DC);
   border-style: none;
   border-radius: 25px;
-  font-size: 16px;
   color: #FFFFFF;
+  font-size: 16px;
   height: 50px;
-  width: 70%;
+  width: 65%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -76,8 +77,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 40px 20px;
-  gap: 20px;
+  padding: 30px 20px 50px 20px;
+  gap: 18px;
   background-color: #F6F6F6;
 }
 .intro__title {
@@ -90,19 +91,65 @@ header {
   font-weight: 300;
 }
 
+/****** how ***********/
+.how {
+  display: flex;
+  flex-direction: column;
+  padding: 0 17.5px;
+  gap: 25px;
+}
+
+.cards-how {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 50px;
+  padding-left: 12px;
+}
+.cards-how .card-how {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  height: 72.38px;
+  padding: 0 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.cards-how .card-how__icon--mobile {
+  height: 20px;
+}
+.cards-how .card-how__icon--list {
+  height: 16px;
+}
+.cards-how .card-how__icon--store {
+  height: 18px;
+}
+.cards-how .card-how__number {
+  position: absolute;
+  left: 18px;
+  font-size: 14.18px;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  border-radius: 25px;
+  padding: 3.6px 8px;
+}
+
 /****** restaurants ***********/
 .restaurants {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+  padding-bottom: 50px;
   background-color: #F6F6F6;
 }
 .restaurants .cards-restaurants {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .card-restaurant {
@@ -144,6 +191,14 @@ header {
 .la-note-enchantee .card-restaurant-img img {
   -o-object-position: center 61%;
      object-position: center 61%;
+}
+
+.a-la-francaise .card-restaurant-img__badge {
+  display: none;
+}
+
+.le-delice-des-sens .card-restaurant-img__badge {
+  display: none;
 }
 
 .card-restaurant-content {
