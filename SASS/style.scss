@@ -28,7 +28,7 @@ $footer-bg-color:#353535;
 $gradient-pink: linear-gradient($secondary-color, $primary-color);
 
 /****** mixins ***********/
-@mixin pink-button-mixin($width:218px){
+@mixin pink-button-mixin($width:218px, $lighten:7){
   background: $gradient-pink;
   border-style: none;
   border-radius: 25px;
@@ -37,6 +37,11 @@ $gradient-pink: linear-gradient($secondary-color, $primary-color);
   height: 50px;
   width: $width;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all .2s ease-in-out;
+  &:hover{
+    background: linear-gradient(lighten($secondary-color,$lighten), lighten($primary-color,$lighten));
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+  }
 }
 
 
@@ -252,25 +257,32 @@ a .card-restaurant{
    }
   }
   &__like{
-    position: relative;
-    opacity: 1;
+    position:relative;
+    opacity:1;
     height: 20px;
-    &:hover{
+    transform-origin:bottom;
+    transform: scale(1) ;
+    transition: all 0.1s ease-in-out;
+    &:hover+ .card-restaurant-content__liked{
     opacity:0;
-    transition: opacity 0s;
     }
   }
   &__liked{
-    opacity:0;
-    position: absolute;
+    position:absolute;
     right:15px;
-    height: 20px;
-    &:hover{
-    opacity: 1;
-    transition: opacity 0.5s;
+    height:20px;
+    z-index: 1;
+    transform-origin:bottom;
+    opacity:0;
+    transform: scale(0.5);
+    transition: all 0.15s cubic-bezier(0,-0.01,.73,.99);
+     &:hover{
+      opacity:1;
+      transform: scale(1);
     }
   }
 }
+
 
 /****** footer ***********/
 footer{
@@ -312,15 +324,14 @@ footer{
 
 
 @media (min-width: #{$breakpoint-small+0.1}) {
-
-body{
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
-}
-.location{
+  body{
+    width: 100%;
+   max-width: 1440px;
+    margin: auto;
+  }
+  .location{
   box-shadow: none;
-}
+  }
 }
 
 
