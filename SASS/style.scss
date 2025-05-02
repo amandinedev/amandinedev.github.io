@@ -72,6 +72,9 @@ $gradient-pink: linear-gradient($secondary-color, $primary-color);
     color: $white;
     font-size: 18px;
   }
+  &--pink{
+    font-size: 50px;
+  }
 }
 
 .section__title{
@@ -96,6 +99,75 @@ a{
 
 
 /****** mobile first ***********/
+
+/****** loader ***********/
+.loader{
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0.9;
+  animation: opacity 1s ease-in forwards 3s;
+  
+    @keyframes opacity{
+      from {
+        opacity: 0.9;
+      }
+      to {
+        opacity: 0;
+      }
+    } 
+  }
+
+  @keyframes animate-oh {
+    from { transform: translateY(0); }
+    to { transform: translateY(-30px); }
+  }
+  @keyframes animate-oh-border{
+    from { border-bottom: 2px;}
+    to { border-bottom: 20px;}
+  }
+
+  @keyframes animate-my {
+    from { transform: translateY(0); }
+    to { transform: translateY(-40px); }
+  }
+  @keyframes animate-food {
+    from { transform: translateY(0); }
+    to { transform: translateY(-30px); }
+  }
+
+  .text--animated{
+    display: flex;
+    position: relative;
+    padding-top: 350px;
+    padding-bottom: 10px;
+    height: 100px;
+    
+    .oh{
+      display: inline;
+      transform-origin: bottom;
+      animation: animate-oh 0.5s ease-in-out infinite alternate;
+    }
+    .my{
+      display: inline;
+      transform-origin: bottom;
+      animation: animate-my 0.5s ease-in-out 0.5s infinite alternate;
+    }
+    .food{
+        display: inline;
+        transform-origin: bottom;
+        animation: animate-food 0.5s ease-in-out 1s infinite alternate;
+    }   
+    }
+   
+
+
 /****** header ***********/
 header{
   display: flex;
@@ -342,13 +414,35 @@ footer{
 @media (min-width: #{$breakpoint-small+0.1}) {
   body{
     width: 100%;
-   max-width: 1440px;
+    max-width: 1440px;
     margin: auto;
+    padding: 0 180px;
+    justify-content:  center;
   }
   .location{
   box-shadow: none;
   }
+
+  .cards-how{
+    flex-direction: row;
+    .card-how{
+      width: 33%;
+    }
+  }
+
+  .restaurants {
+    .cards-restaurants {
+      flex-direction: row ;
+      flex-wrap: wrap;
+      gap: 50px;
+      column-gap: 100px;
+       a{
+         width: 45%;
+       }
+    }  
+  }
 }
+
 
 
 
