@@ -1,0 +1,33 @@
+/****** mixins ***********/
+@mixin pink-button-mixin($width:218px, $lighten:7){
+    background: $gradient-pink;
+    border-style: none;
+    border-radius: 25px;
+    color: $white;
+    font-size: 16px;
+    height: 50px;
+    width: $width;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    &:hover{
+      &::after{
+        opacity: 1;
+      }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0;
+      background: linear-gradient(lighten($secondary-color,$lighten), lighten($primary-color,$lighten));
+      border-radius: 25px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+      transition: opacity .2s ease-in-out;
+    }
+  }
+  

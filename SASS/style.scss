@@ -1,6 +1,3 @@
-
-  
-
 /****** General ***********/
 *{
   font-family: roboto, sans-serif;
@@ -10,58 +7,20 @@
 }
 
 /****** variables ***********/
-/*media-queries*/
-$breakpoint-small: 768px;
-$breakpoint-medium: 1024px;
-$breakpoint-large: 1440px;
+@import "./library/colors.scss";
+@import "./library/mixins.scss";
 
-/*colors*/
-$dark: #101010;
-$white: #FFFFFF;
-$primary-color: #9356DC;
-$secondary-color: #FF79DA ;
-$tertiary-color: #99E2D0;
-$tertiary-darken-color: #008766;
-$location-bg-color:#EAEAEA;
-$main-bg-color:#F6F6F6;
-$footer-bg-color:#353535;
-$gradient-pink: linear-gradient($secondary-color, $primary-color);
+/****** elements ***********/
 
-/****** mixins ***********/
-@mixin pink-button-mixin($width:218px, $lighten:7){
-  background: $gradient-pink;
-  border-style: none;
-  border-radius: 25px;
-  color: $white;
-  font-size: 16px;
-  height: 50px;
-  width: $width;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  &:hover{
-    &::after{
-      opacity: 1;
-    }
-  }
-  &::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    background: linear-gradient(lighten($secondary-color,$lighten), lighten($primary-color,$lighten));
-    border-radius: 25px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
-    transition: opacity .2s ease-in-out;
+body{
+  @media (min-width:768px) {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    justify-content:center;
   }
 }
 
-
-/****** elements ***********/
 .logo{
   font-family: Shrikhand, serif;
   &--black{
@@ -110,16 +69,24 @@ a{
   height: 100%;
   display: flex;
   justify-content: center;
+  border-right: 0px solid $tertiary-color;
+  border-radius: 0 25px 25px 0;
   z-index: 2;
-  opacity: 0.9;
+  opacity: 1;
   animation: opacity 1s ease-in forwards 3s;
-  
     @keyframes opacity{
       from {
-        opacity: 0.9;
+        opacity: 1;
+        width: 100%;
+        border-right: 2px solid $tertiary-color;
+        transform: translateX(0px);
       }
       to {
-        opacity: 0;
+        opacity: 1;
+        left: -150px;
+        width: 0%;
+        border-right: 100px solid $tertiary-color;
+        transform: translateX(0px);
       }
     } 
   }
@@ -144,24 +111,22 @@ a{
 
   .text--animated{
     display: flex;
-    position: relative;
+    align-content: center;
+    position: absolute;
     padding-top: 350px;
     padding-bottom: 10px;
     height: 100px;
     
     .oh{
       display: inline;
-      transform-origin: bottom;
       animation: animate-oh 0.5s ease-in-out infinite alternate;
     }
     .my{
       display: inline;
-      transform-origin: bottom;
       animation: animate-my 0.5s ease-in-out 0.5s infinite alternate;
     }
     .food{
         display: inline;
-        transform-origin: bottom;
         animation: animate-food 0.5s ease-in-out 1s infinite alternate;
     }   
     }
@@ -189,8 +154,11 @@ header{
   height: 50px;
   width: 100%;
   gap: 17px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -4px 4px rgba(0, 0, 0, 0.25);
   background-color: $location-bg-color ;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -4px 4px rgba(0, 0, 0, 0.25);
+  @media (min-width:768px){
+    box-shadow: none;
+    }
   &__img {
     height: 16px;
   }
@@ -220,6 +188,14 @@ header{
   flex-direction: column;
   padding: 0 17.5px;
   gap: 25px;
+  @media (min-width: 768px){
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  @media (min-width: 1440px){
+    padding-right: 180px;
+    padding-left: 180px;
+  }
 }
 
 .cards-how{
@@ -228,6 +204,10 @@ header{
   gap: 24px;
   padding-bottom: 50px;
   padding-left: 12px;
+  @media (min-width: 1024px){
+    flex-direction: row;
+  }
+  }
   
   .card-how{
     display: flex;
@@ -238,8 +218,11 @@ header{
     border-radius: 20px;
     background-color: $main-bg-color;
     height: 72.38px;
-    padding: 0 40px;
+    padding: 0 33px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    @media (min-width: 1024px){
+      width: 33%;
+    }
     &__icon--mobile{
         height: 20px;
       }
@@ -259,7 +242,7 @@ header{
       padding: 3.6px 8px;
     }
   }
-}
+
 
 /****** restaurants ***********/
 .restaurants{
@@ -270,13 +253,38 @@ header{
   padding-right: 17.5px;
   padding-bottom: 50px;
   background-color: $main-bg-color;
+  @media (min-width: 768px){
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  @media (min-width:1024px) {
+      .section__title{
+       padding-top:30px;
+      }
+    padding-right: 50px;
+    padding-left: 50px;
+    }
+  @media (min-width:1440px) {
+    padding-right: 180px;
+    padding-left: 180px;
+    }
   .cards-restaurants {
     display: flex;
     flex-direction: column;
     gap: 18px;
+    @media (min-width:768px){
+      flex-direction: row ;
+      flex-wrap: wrap;
+      column-gap: 8%;
+    }
+    @media (min-width:1024px){
+      gap: 50px;
+      column-gap: 10%;
+    }
   }
 }
-a .card-restaurant{
+
+.cards-restaurants a{
   display: flex;
   flex-direction: column;
   position: relative;
@@ -285,13 +293,22 @@ a .card-restaurant{
   border-radius: 15px;
   background-color: $white;
   text-decoration: none;
+  @media (min-width:768px){ 
+    width: 46%;
+    }
+  @media (min-width:1024px){ 
+    width: 45%;
+    }
+  @media (min-width:1440px){ 
+    width: 45%;
+    }
   .card-restaurant-img {
     position: relative;
     width: 100%;
     height: 70%;
       &__img{
         position: relative;
-        object-position: bottom;
+        // object-position: bottom;
         width: 100%;
         height: 177px;
         border-top-left-radius: 15px;
@@ -312,19 +329,33 @@ a .card-restaurant{
   }
 }
 
+
 /*images specific display*/
+.la-palette-du-gout .card-restaurant-img img{
+  object-position: center 62%;
+}
+
 .la-note-enchantee .card-restaurant-img img{
   object-position: center 61% ;
 }
 
-.a-la-francaise .card-restaurant-img__badge{
-  display: none;
+.a-la-francaise .card-restaurant-img{
+  img{
+    object-position: center 67%;
+  }
+  __badge{
+    display: none;
+  }
 }
 
-.le-delice-des-sens .card-restaurant-img__badge{
-  display: none;
-}
-  
+.le-delice-des-sens .card-restaurant-img{
+  img{
+   object-position: center 70%;
+  }
+  __badge{
+display: none;
+  }
+}  
 .card-restaurant-content {
   display: flex;
   justify-content: space-between;
@@ -379,12 +410,30 @@ footer{
   flex-direction: column;
   padding:22px 25px;
   gap: 16px;
+  @media (min-width: 768px){
+    flex-direction: row-reverse;
+    padding: 22px 50px;
+    gap:20px;
+  }
+  @media (min-width: 1024px){
+    gap: 100px;
+    padding: 30px 90px 22px 50px;
+  }
 }
 
 .footer-links{
   display: flex;
   flex-direction: column;
   gap: 7px;
+  @media (min-width: 768px){
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  @media (min-width: 1024px){
+  gap: 50px;
+  }
   a{
     display: flex;
     gap: 9px;
@@ -398,12 +447,18 @@ footer{
   &__container-one{
     display: flex;
     flex-direction: column;
-    gap: 7px
+    gap: 7px;
+    @media (min-width: 768px){
+      flex-direction: row;
+    }
   }
   &__container-two{
     display: flex;
     flex-direction: column;
     gap: 7px;
+    @media (min-width: 768px){
+      flex-direction: row;
+    }
     a{
     font-weight:400;
     }
@@ -411,37 +466,12 @@ footer{
 }
 
 
-@media (min-width: #{$breakpoint-small+0.1}) {
-  body{
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 180px;
-    justify-content:  center;
-  }
-  .location{
-  box-shadow: none;
-  }
 
-  .cards-how{
-    flex-direction: row;
-    .card-how{
-      width: 33%;
-    }
-  }
 
-  .restaurants {
-    .cards-restaurants {
-      flex-direction: row ;
-      flex-wrap: wrap;
-      gap: 50px;
-      column-gap: 100px;
-       a{
-         width: 45%;
-       }
-    }  
-  }
-}
+
+
+
+
 
 
 
