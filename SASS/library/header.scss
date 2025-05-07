@@ -1,0 +1,40 @@
+@import 'colors.scss';
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .header-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 63px;
+    .back-arrow{
+      opacity: 0;
+      position: absolute;
+      left: 5%;
+      top: 23.5px;
+    }
+    .logo--black{
+      height: 63px;
+      align-content: center;
+    }
+  }
+  .location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    gap: 17px;
+    background-color: $location-bg-color ;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -4px 4px rgba(0, 0, 0, 0.25);
+    @media (min-width:768px){
+      box-shadow: none;
+      }
+    &__img {
+      height: 16px;
+    }
+  }
+}

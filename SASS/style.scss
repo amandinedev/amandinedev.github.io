@@ -13,11 +13,12 @@
 /****** elements ***********/
 
 body{
+justify-content:center;
   @media (min-width:768px) {
     width: 100%;
     max-width: 1440px;
-    margin: auto;
-    justify-content:center;
+    // margin: auto;
+    
   }
 }
 
@@ -134,35 +135,7 @@ a{
 
 
 /****** header ***********/
-header{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height:113px ;
-}
-
-.logo--black{
-  height: 63px;
-  align-content: center;
-}
-
-.location{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  gap: 17px;
-  background-color: $location-bg-color ;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -4px 4px rgba(0, 0, 0, 0.25);
-  @media (min-width:768px){
-    box-shadow: none;
-    }
-  &__img {
-    height: 16px;
-  }
-}
+@import './library/header.scss';
 
 /****** intro ***********/
 .intro{
@@ -376,25 +349,13 @@ display: none;
    }
   }
   &__like{
-    position:relative;
-    opacity:1;
-    height: 20px;
-    transform-origin:bottom;
-    transform: scale(1) ;
-    transition: all 0.1s ease-in-out;
+    @include like;
     &:hover+ .card-restaurant-content__liked{
     opacity:0;
     }
   }
   &__liked{
-    position:absolute;
-    right:15px;
-    height:20px;
-    z-index: 1;
-    transform-origin:bottom;
-    opacity:0;
-    transform: scale(0.5);
-    transition: all 0.15s cubic-bezier(0,-0.01,.73,.99);
+   @include liked;
      &:hover{
       opacity:1;
       transform: scale(1);
@@ -402,70 +363,12 @@ display: none;
   }
 }
 
-
 /****** footer ***********/
-footer{
-  background-color: $footer-bg-color;
-  display: flex;
-  flex-direction: column;
-  padding:22px 25px;
-  gap: 16px;
-  @media (min-width: 768px){
-    flex-direction: row-reverse;
-    padding: 22px 50px;
-    gap:20px;
-  }
-  @media (min-width: 1024px){
-    gap: 100px;
-    padding: 30px 90px 22px 50px;
-  }
-}
+@import "./library/footer.scss";
 
-.footer-links{
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  @media (min-width: 768px){
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  @media (min-width: 1024px){
-  gap: 50px;
-  }
-  a{
-    display: flex;
-    gap: 9px;
-    color: $white;
-    align-items: center;
-    img{
-      object-fit: none;
-      height: 13px;
-    }
-  }
-  &__container-one{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    @media (min-width: 768px){
-      flex-direction: row;
-    }
-  }
-  &__container-two{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    @media (min-width: 768px){
-      flex-direction: row;
-    }
-    a{
-    font-weight:400;
-    }
-  }
-}
+/****** page-restaurants ***********/
 
-
+@import "./library/page-restaurant.scss";
 
 
 
