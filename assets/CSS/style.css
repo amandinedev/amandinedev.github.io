@@ -418,16 +418,16 @@ header .location__img {
 }
 
 .a-la-francaise .card-restaurant-img img {
-  -o-object-position: center 67%;
-     object-position: center 67%;
+  -o-object-position: center 85%;
+     object-position: center 85%;
 }
 .a-la-francaise .card-restaurant-img__badge {
   display: none;
 }
 
 .le-delice-des-sens .card-restaurant-img img {
-  -o-object-position: center 70%;
-     object-position: center 70%;
+  -o-object-position: center 85%;
+     object-position: center 85%;
 }
 .le-delice-des-sens .card-restaurant-img__badge {
   display: none;
