@@ -1,0 +1,148 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 17.5px;
+    padding-right: 17.5px;
+    padding-bottom: 50px;
+    background-color: $main-bg-color;
+    @media (min-width: 768px){
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @media (min-width:1024px) {
+        .section__title{
+         padding-top:30px;
+        }
+      padding-right: 50px;
+      padding-left: 50px;
+      }
+    @media (min-width:1440px) {
+      padding-right: 180px;
+      padding-left: 180px;
+      }
+    .cards-restaurants {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      @media (min-width:768px){
+        flex-direction: row ;
+        flex-wrap: wrap;
+        column-gap: 8%;
+      }
+      @media (min-width:1024px){
+        gap: 50px;
+        column-gap: 10%;
+      }
+    }
+  }
+  
+  .cards-restaurants a{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 251px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: $white;
+    text-decoration: none;
+    @media (min-width:768px){ 
+      width: 46%;
+      }
+    @media (min-width:1024px){ 
+      width: 45%;
+      }
+    @media (min-width:1440px){ 
+      width: 45%;
+      }
+    .card-restaurant-img {
+      position: relative;
+      width: 100%;
+      height: 70%;
+        &__img{
+          position: relative;
+          // object-position: bottom;
+          width: 100%;
+          height: 177px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        &__badge{
+          position: absolute;
+          right: 16px;
+          top: 16px;
+          z-index: 1;
+          font-size: 14px;
+          padding: 7.5px;
+          border-radius: 2px;
+          color:$tertiary-darken-color ;
+          background-color: $tertiary-color;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+  }
+  
+  
+  /*images specific display*/
+  .la-palette-du-gout .card-restaurant-img img{
+    object-position: center 62%;
+  }
+  
+  .la-note-enchantee .card-restaurant-img img{
+    object-position: center 61% ;
+  }
+  
+  .a-la-francaise .card-restaurant-img{
+    img{
+      object-position: center 67%;
+    }
+    __badge{
+      display: none;
+    }
+  }
+  
+  .le-delice-des-sens .card-restaurant-img{
+    img{
+     object-position: center 70%;
+    }
+    __badge{
+  display: none;
+    }
+  }  
+  .card-restaurant-content {
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+    padding: 15px;
+    align-items: center;
+    box-sizing: border-box;
+    &-text{
+    display: flex;
+    flex-direction: column;
+     &__title{
+      font-size: 18px;
+      font-weight: 700;
+     }
+     &__subtitle{
+      font-size: 17px;
+      font-weight: 300;
+     }
+    }
+    &__like{
+      @include like;
+      &:hover+ .card-restaurant-content__liked{
+      opacity:0;
+      }
+    }
+    &__liked{
+     @include liked;
+       &:hover{
+        opacity:1;
+        transform: scale(1);
+      }
+    }
+  }

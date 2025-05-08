@@ -213,6 +213,7 @@ header .location__img {
 }
 
 /****** intro ***********/
+/*colors*/
 .intro {
   display: flex;
   flex-direction: column;
@@ -232,6 +233,7 @@ header .location__img {
 }
 
 /****** how ***********/
+/*colors*/
 .how {
   display: flex;
   flex-direction: column;
@@ -301,6 +303,8 @@ header .location__img {
 }
 
 /****** restaurants ***********/
+/*colors*/
+/****** mixins ***********/
 .restaurants {
   display: flex;
   flex-direction: column;

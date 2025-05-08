@@ -1,0 +1,61 @@
+@import 'colors.scss';
+
+.how{
+    display: flex;
+    flex-direction: column;
+    padding: 0 17.5px;
+    gap: 25px;
+    @media (min-width: 768px){
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @media (min-width: 1440px){
+      padding-right: 180px;
+      padding-left: 180px;
+    }
+  }
+  
+  .cards-how{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 50px;
+    padding-left: 12px;
+    @media (min-width: 1024px){
+      flex-direction: row;
+    }
+    }
+    
+    .card-how{
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px;
+      align-items: center;
+      position: relative;
+      border-radius: 20px;
+      background-color: $main-bg-color;
+      height: 72.38px;
+      padding: 0 33px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      @media (min-width: 1024px){
+        width: 33%;
+      }
+      &__icon--mobile{
+          height: 20px;
+        }
+      &__icon--list{
+          height: 16px;
+        }
+      &__icon--store{
+          height: 18px;
+        }
+      &__number{
+        position:absolute;
+        left:-12px;
+        font-size: 14.18px;
+        color: $white;
+        background-color: $primary-color;
+        border-radius: 25px;
+        padding: 3.6px 8px;
+      }
+    }
