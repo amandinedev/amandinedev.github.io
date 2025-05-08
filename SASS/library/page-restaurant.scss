@@ -199,6 +199,7 @@ header{
 }
 
 .menu{
+    overflow: hidden;
     &__starters{
         transform-origin:bottom;
         animation: slideInY 1s ease-in-out forwards ;      

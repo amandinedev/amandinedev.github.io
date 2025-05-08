@@ -746,6 +746,9 @@ header .header-logo a .back-arrow {
     opacity: 1;
   }
 }
+.menu {
+  overflow: hidden;
+}
 .menu__starters {
   transform-origin: bottom;
   animation: slideInY 1s ease-in-out forwards;
