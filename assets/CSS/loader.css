@@ -19,14 +19,14 @@
     opacity: 1;
     padding-right: 0px;
     border-right: 2px solid #99E2D0;
-    transform: translateX(0px);
+    transform: translateX(0vw);
   }
   to {
     opacity: 1;
     left: -150px;
     padding-right: 40px;
     border-right: 60px solid #99E2D0;
-    transform: translateX(-435px);
+    transform: translateX(-100vw);
   }
 }
 

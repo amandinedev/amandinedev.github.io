@@ -132,6 +132,10 @@
       font-weight: 300;
      }
     }
+    // &--icon{
+    //     display: flex;
+    //     justify-content: initial;
+    // }
     &__like{
       @include like;
       &:hover+ .card-restaurant-content__liked{
@@ -140,6 +144,7 @@
     }
     &__liked{
      @include liked;
+     right: 15px;
        &:hover{
         opacity:1;
         transform: scale(1);

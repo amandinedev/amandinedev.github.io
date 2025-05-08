@@ -57,24 +57,29 @@ header{
             font-size: 28px;
             color: $dark;
         }
-        &--icon-like{
-            @include like;
-
-            &:hover+ .menu__title--icon-liked{
-            opacity:0;
+        &--icon{
+            display: flex;
+            justify-content: initial;
+            &-like{
+                @include like;
+                &:hover+ .menu__title--icon-liked{
+                opacity:0;
+                }
+            }
+            &-liked{
+                @include liked;
+            // right: 0;
+            // left: 0;
+                transform: scale(0.5) ;
+            // right: 36.2px;
+                @media (min-width:768px){
+                }
+                &:hover{
+                opacity:1;
+                transform: scale(1) ;
+                }
             }
         }
-        &--icon-liked{
-            @include liked;
-            right: 36.2px;
-            @media (min-width:768px){
-                right: 377px;
-            }
-            &:hover{
-            opacity:1;
-            transform: scale(1);
-        }
-      }
     }
     &__subtitle{
     font-weight: 300;
@@ -169,6 +174,7 @@ header{
         }
     }
 }
+
 
 @keyframes slideInX {
     from {
@@ -268,4 +274,4 @@ header{
     left: 0px;
     right: 0px;
     bottom: -1056px;
-    }
+}

@@ -51,6 +51,10 @@ header .header-logo a .back-arrow {
   font-size: 28px;
   color: #101010;
 }
+.menu__title--icon {
+  display: flex;
+  justify-content: initial;
+}
 .menu__title--icon-like {
   position: relative;
   opacity: 1;
@@ -64,19 +68,13 @@ header .header-logo a .back-arrow {
 }
 .menu__title--icon-liked {
   position: absolute;
-  right: 15px;
   height: 20px;
   z-index: 1;
   transform-origin: bottom;
   opacity: 0;
   transform: scale(0.5);
   transition: all 0.15s cubic-bezier(0, -0.01, 0.73, 0.99);
-  right: 36.2px;
-}
-@media (min-width: 768px) {
-  .menu__title--icon-liked {
-    right: 377px;
-  }
+  transform: scale(0.5);
 }
 .menu__title--icon-liked:hover {
   opacity: 1;

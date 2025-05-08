@@ -104,14 +104,14 @@ a {
     opacity: 1;
     padding-right: 0px;
     border-right: 2px solid #99E2D0;
-    transform: translateX(0px);
+    transform: translateX(0vw);
   }
   to {
     opacity: 1;
     left: -150px;
     padding-right: 40px;
     border-right: 60px solid #99E2D0;
-    transform: translateX(-435px);
+    transform: translateX(-100vw);
   }
 }
 
@@ -466,13 +466,13 @@ header .location__img {
 }
 .card-restaurant-content__liked {
   position: absolute;
-  right: 15px;
   height: 20px;
   z-index: 1;
   transform-origin: bottom;
   opacity: 0;
   transform: scale(0.5);
   transition: all 0.15s cubic-bezier(0, -0.01, 0.73, 0.99);
+  right: 15px;
 }
 .card-restaurant-content__liked:hover {
   opacity: 1;
@@ -609,6 +609,10 @@ header .header-logo a .back-arrow {
   font-size: 28px;
   color: #101010;
 }
+.menu__title--icon {
+  display: flex;
+  justify-content: initial;
+}
 .menu__title--icon-like {
   position: relative;
   opacity: 1;
@@ -622,19 +626,13 @@ header .header-logo a .back-arrow {
 }
 .menu__title--icon-liked {
   position: absolute;
-  right: 15px;
   height: 20px;
   z-index: 1;
   transform-origin: bottom;
   opacity: 0;
   transform: scale(0.5);
   transition: all 0.15s cubic-bezier(0, -0.01, 0.73, 0.99);
-  right: 36.2px;
-}
-@media (min-width: 768px) {
-  .menu__title--icon-liked {
-    right: 377px;
-  }
+  transform: scale(0.5);
 }
 .menu__title--icon-liked:hover {
   opacity: 1;
