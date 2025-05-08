@@ -83,6 +83,7 @@ a {
 
 /****** mobile first ***********/
 /****** loader ***********/
+/*colors*/
 .loader {
   background-color: #FFFFFF;
   position: fixed;
@@ -96,21 +97,21 @@ a {
   border-radius: 0 25px 25px 0;
   z-index: 2;
   opacity: 1;
-  animation: opacity 1s ease-in forwards 3s;
+  animation: panel 1s ease-in forwards 3s;
 }
-@keyframes opacity {
+@keyframes panel {
   from {
     opacity: 1;
-    width: 100%;
+    padding-right: 0px;
     border-right: 2px solid #99E2D0;
     transform: translateX(0px);
   }
   to {
     opacity: 1;
     left: -150px;
-    width: 0%;
-    border-right: 100px solid #99E2D0;
-    transform: translateX(0px);
+    padding-right: 40px;
+    border-right: 60px solid #99E2D0;
+    transform: translateX(-435px);
   }
 }
 
@@ -587,9 +588,9 @@ header .header-logo a .back-arrow {
   width: 100%;
   margin: auto;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1055px) {
   .menu {
-    width: 1024px;
+    width: 1055px;
   }
 }
 .menu__title {
