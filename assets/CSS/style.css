@@ -111,7 +111,7 @@ a {
     left: -150px;
     padding-right: 40px;
     border-right: 60px solid #99E2D0;
-    transform: translateX(-100vw);
+    transform: translateX(-150vw);
   }
 }
 
@@ -421,7 +421,7 @@ header .location__img {
   -o-object-position: center 67%;
      object-position: center 67%;
 }
-.a-la-francaise .card-restaurant-img __badge {
+.a-la-francaise .card-restaurant-img__badge {
   display: none;
 }
 
@@ -429,7 +429,7 @@ header .location__img {
   -o-object-position: center 70%;
      object-position: center 70%;
 }
-.le-delice-des-sens .card-restaurant-img __badge {
+.le-delice-des-sens .card-restaurant-img__badge {
   display: none;
 }
 

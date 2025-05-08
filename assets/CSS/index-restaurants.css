@@ -116,7 +116,7 @@
   -o-object-position: center 67%;
      object-position: center 67%;
 }
-.a-la-francaise .card-restaurant-img __badge {
+.a-la-francaise .card-restaurant-img__badge {
   display: none;
 }
 
@@ -124,7 +124,7 @@
   -o-object-position: center 70%;
      object-position: center 70%;
 }
-.le-delice-des-sens .card-restaurant-img __badge {
+.le-delice-des-sens .card-restaurant-img__badge {
   display: none;
 }
 

@@ -100,7 +100,7 @@
     img{
       object-position: center 67%;
     }
-    __badge{
+    &__badge{
       display: none;
     }
   }
@@ -109,7 +109,7 @@
     img{
      object-position: center 70%;
     }
-    __badge{
+    &__badge{
   display: none;
     }
   }  
@@ -132,10 +132,7 @@
       font-weight: 300;
      }
     }
-    // &--icon{
-    //     display: flex;
-    //     justify-content: initial;
-    // }
+    
     &__like{
       @include like;
       &:hover+ .card-restaurant-content__liked{
