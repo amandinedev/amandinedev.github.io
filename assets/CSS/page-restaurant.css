@@ -2,6 +2,9 @@
 /****** mixins ***********/
 body {
   min-height: 1056px;
+  max-width: 1440px;
+  margin: auto;
+  justify-content: center;
 }
 
 header .header-logo a .back-arrow {
@@ -17,7 +20,7 @@ header .header-logo a .back-arrow {
   position: absolute;
   top: 273px;
   left: 0;
-  width: 100%;
+  right: 0;
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   display: flex;
@@ -27,7 +30,14 @@ header .header-logo a .back-arrow {
   box-sizing: border-box;
   gap: 40px;
   align-items: center;
-  max-width: 1055px;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 1024px) {
+  .menu {
+    width: 1024px;
+  }
 }
 .menu__title {
   display: flex;
@@ -65,7 +75,7 @@ header .header-logo a .back-arrow {
 }
 @media (min-width: 768px) {
   .menu__title--icon-liked {
-    right: 235px;
+    right: 377px;
   }
 }
 .menu__title--icon-liked:hover {
