@@ -20,13 +20,31 @@ header{
 }
 
 .menu-intro__img {
-    height: 250px;
+    height: 275px;
     width: 100%;
+    @media(min-width: 768px) {
+       height: 383px;
     }
+}
+
+/*images specific display*/
+.la-palette-du-gout{
+    object-position: center 58%;
+}
+.la-note-enchantee{
+    object-position: center 60%;
+}
+.a-la-francaise{
+    object-position: center 67%;
+}
+.le-delice-des-sens{
+    object-position: center 79%;
+}
+
 
 .menu{
     position: absolute;
-    top: 273px;
+    top: 298px;
     left: 0;
     right:0;
     background-color: $main-bg-color;
@@ -39,9 +57,11 @@ header{
     gap:40px;
     align-items: center;
     justify-content: center;
-    // max-width: 1055px;
     width: 100%;
     margin: auto;
+    @media (min-width: 768px){
+        top:439.34px;
+    }
     @media (min-width:1055px){
         width:1055px;
     }
@@ -68,10 +88,7 @@ header{
             }
             &-liked{
                 @include liked;
-            // right: 0;
-            // left: 0;
                 transform: scale(0.5) ;
-            // right: 36.2px;
                 @media (min-width:768px){
                 }
                 &:hover{
@@ -99,7 +116,6 @@ header{
         max-width: 664px;
         width: 100%;
         @media (min-width:1024px){
-        // padding: 0 180px;
         }
     }
     &__card{
@@ -112,7 +128,6 @@ header{
         border-radius: 15.04px;
         height: 69px;
         min-width: 349px;
-        // max-width: 664px;
         overflow: hidden;
         box-sizing: border-box;
         box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.1);
@@ -123,10 +138,7 @@ header{
             gap: 5px;
             box-sizing: border-box;
             width: 100%;
-            transition: all .3s ease-in-out 0.1s ;
-            &:hover{
-                width: 69%;
-            }
+            transition: all .3s ease-in-out 0.1s;
             &__title{
                 font-size: 18px;
                 white-space: nowrap;
@@ -150,9 +162,6 @@ header{
             right: 0px;
             transition: all 0.3s ease-in-out 0.2s;
         }
-        &:hover &-price{
-            transform: translateX(-60px);
-        }
         &-icon{
             position: absolute;
             z-index: 0;
@@ -160,18 +169,24 @@ header{
             opacity: 0;
             transform: translateX(60px);
             transition: all 0.3s ease-in-out 0.2s;
-        }
-        &:hover &-icon{
-            opacity: 1;
-            transform: translateX(0px);
-            // position: relative;        
-         }
-        &-icon{
             background-color: $tertiary-color;
             padding: 24.5px 19.5px;
             box-sizing: border-box;
-             border-radius: 0 14.05px 14.05px 0;
+            border-radius: 0 14.05px 14.05px 0;
         }
+        &:hover {
+            .menu__card-content-txt{
+                width: 69%;
+            }
+            .menu__card-price{
+            transform: translateX(-60px);
+            }
+            .menu__card-icon{
+            opacity: 1;
+            transform: translateX(0px);
+            }
+        }
+        
     }
 }
 
@@ -220,6 +235,12 @@ header{
             transform-origin:left;
             animation: slideInX 1s ease-in-out forwards;
             animation-delay: 0.3s;
+        }   
+        &__four{
+            opacity: 0;
+            transform-origin:left;
+            animation: slideInX 1s ease-in-out forwards;
+            animation-delay: 0.4s;
         }   
     }
     &__mains{

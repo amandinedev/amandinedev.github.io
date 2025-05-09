@@ -6,6 +6,11 @@ header{
   justify-content: center;
   align-items: center;
   margin: auto;
+  max-width: 1440px;
+  position: relative;
+  @media (min-width: 768px){
+    height: 96.33px;
+  }
   .header-logo{
     display: flex;
     flex-direction: row;
@@ -16,6 +21,10 @@ header{
       position: absolute;
       left: 20px;
       top: 23.5px;
+      margin: auto;
+      @media (min-width:768px){
+      top:40.165px ;
+      }
     }
     .logo--black{
       height: 63px;

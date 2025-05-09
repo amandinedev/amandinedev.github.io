@@ -12,13 +12,39 @@ header .header-logo a .back-arrow {
 }
 
 .menu-intro__img {
-  height: 250px;
+  height: 275px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .menu-intro__img {
+    height: 383px;
+  }
+}
+
+/*images specific display*/
+.la-palette-du-gout {
+  -o-object-position: center 58%;
+     object-position: center 58%;
+}
+
+.la-note-enchantee {
+  -o-object-position: center 60%;
+     object-position: center 60%;
+}
+
+.a-la-francaise {
+  -o-object-position: center 67%;
+     object-position: center 67%;
+}
+
+.le-delice-des-sens {
+  -o-object-position: center 79%;
+     object-position: center 79%;
 }
 
 .menu {
   position: absolute;
-  top: 273px;
+  top: 298px;
   left: 0;
   right: 0;
   background-color: #F6F6F6;
@@ -33,6 +59,11 @@ header .header-logo a .back-arrow {
   justify-content: center;
   width: 100%;
   margin: auto;
+}
+@media (min-width: 768px) {
+  .menu {
+    top: 439.34px;
+  }
 }
 @media (min-width: 1055px) {
   .menu {
@@ -121,9 +152,6 @@ header .header-logo a .back-arrow {
   width: 100%;
   transition: all 0.3s ease-in-out 0.1s;
 }
-.menu__card-content-txt:hover {
-  width: 69%;
-}
 .menu__card-content-txt__title {
   font-size: 18px;
   white-space: nowrap;
@@ -146,9 +174,6 @@ header .header-logo a .back-arrow {
   right: 0px;
   transition: all 0.3s ease-in-out 0.2s;
 }
-.menu__card:hover .menu__card-price {
-  transform: translateX(-60px);
-}
 .menu__card-icon {
   position: absolute;
   z-index: 0;
@@ -156,16 +181,20 @@ header .header-logo a .back-arrow {
   opacity: 0;
   transform: translateX(60px);
   transition: all 0.3s ease-in-out 0.2s;
-}
-.menu__card:hover .menu__card-icon {
-  opacity: 1;
-  transform: translateX(0px);
-}
-.menu__card-icon {
   background-color: #99E2D0;
   padding: 24.5px 19.5px;
   box-sizing: border-box;
   border-radius: 0 14.05px 14.05px 0;
+}
+.menu__card:hover .menu__card-content-txt {
+  width: 69%;
+}
+.menu__card:hover .menu__card-price {
+  transform: translateX(-60px);
+}
+.menu__card:hover .menu__card-icon {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 @keyframes slideInX {
@@ -212,6 +241,12 @@ header .header-logo a .back-arrow {
   transform-origin: left;
   animation: slideInX 1s ease-in-out forwards;
   animation-delay: 0.3s;
+}
+.menu__starters__four {
+  opacity: 0;
+  transform-origin: left;
+  animation: slideInX 1s ease-in-out forwards;
+  animation-delay: 0.4s;
 }
 .menu__mains {
   opacity: 0;
