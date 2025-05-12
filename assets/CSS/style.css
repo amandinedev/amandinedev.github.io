@@ -515,19 +515,25 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 22px 25px;
+  box-sizing: border-box;
   gap: 16px;
 }
 @media (min-width: 768px) {
   footer {
     flex-direction: row-reverse;
-    padding: 22px 50px;
+    align-items: center;
+    height: 114px;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
     gap: 20px;
   }
 }
 @media (min-width: 1024px) {
   footer {
+    justify-content: flex-start;
     gap: 100px;
-    padding: 30px 90px 22px 50px;
+    padding: 50px 90px 30px 30px;
   }
 }
 
@@ -823,7 +829,7 @@ header .header-logo a .back-arrow {
   animation: slideInX 1s ease-in-out forwards;
   animation-delay: 0.2s;
 }
-.menu__starters__tree {
+.menu__starters__three {
   opacity: 0;
   transform-origin: left;
   animation: slideInX 1s ease-in-out forwards;
@@ -852,7 +858,7 @@ header .header-logo a .back-arrow {
   animation: slideInX 1s ease-in-out forwards;
   animation-delay: 0.5s;
 }
-.menu__mains__tree {
+.menu__mains__three {
   opacity: 0;
   transform-origin: left;
   animation: slideInX 1s ease-in-out forwards;
@@ -875,7 +881,7 @@ header .header-logo a .back-arrow {
   animation: slideInX 1s ease-in-out forwards;
   animation-delay: 0.8s;
 }
-.menu__deserts__tree {
+.menu__deserts__three {
   opacity: 0;
   transform-origin: left;
   animation: slideInX 1s ease-in-out forwards;
