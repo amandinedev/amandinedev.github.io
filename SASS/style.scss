@@ -1,5 +1,5 @@
 /****** General ***********/
-*{
+* {
   font-family: roboto, sans-serif;
   font-weight: 500;
   margin: 0;
@@ -11,67 +11,60 @@
 @import "./library/mixins.scss";
 
 /****** elements ***********/
-
-body{
-justify-content:center;
-  @media (min-width:768px) {
-    width: 100%;
-    max-width: 1440px;
-    // margin: auto;
-  }
+body {
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
 }
 
-.logo{
+.logo {
   font-family: Shrikhand, serif;
-  &--black{
-    color: $dark ;
+  &--black {
+    color: $dark;
     font-size: 30px;
   }
-  &--white{
+  &--white {
     color: $white;
     font-size: 18px;
   }
-  &--pink{
+  &--loader {
     font-size: 50px;
   }
 }
 
-.section__title{
+.section__title {
   color: $dark;
   font-size: 24px;
   font-weight: 700;
-  padding-top: 50px ;
+  padding-top: 50px;
 }
 
-.button--pink{
-  @include pink-button-mixin($width:218px, $lighten:7);
+.button--pink {
+  @include pink-button-mixin($width: 218px, $lighten: 7);
 }
 
-img{
-  object-fit:cover;
+img {
+  object-fit: cover;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-
-
 /****** mobile first ***********/
 
 /****** loader ***********/
-@import './library/loader.scss';
+@import "./library/loader.scss";
 
 /****** header ***********/
-@import './library/header.scss';
+@import "./library/header.scss";
 
 /****** intro ***********/
-@import './library/index-intro.scss';
+@import "./library/index-intro.scss";
 
 /****** how ***********/
-@import './library/index-how.scss';
-
+@import "./library/index-how.scss";
 
 /****** restaurants ***********/
 @import "./library/index-restaurants.scss";
@@ -81,13 +74,3 @@ a{
 
 /****** page-restaurants ***********/
 @import "./library/page-restaurant.scss";
-
-
-
-
-
-
-
-
-
-

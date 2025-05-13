@@ -1,51 +1,56 @@
 /****** mixins ***********/
-@mixin pink-button-mixin($width:218px, $lighten:7){
-    background: $gradient-pink;
-    border-style: none;
+@mixin pink-button-mixin($width: 218px, $lighten: 7) {
+  background: $gradient-pink;
+  border-style: none;
+  border-radius: 25px;
+  color: $white;
+  font-size: 16px;
+  height: 50px;
+  width: $width;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  &:hover {
+    &::after {
+      // Overlay effect
+      opacity: 1; // Show overlay on hover
+    }
+  }
+  // Overlay content and styles
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0; // Initially hidden
+    background: linear-gradient(
+      lighten($secondary-color, $lighten),
+      lighten($primary-color, $lighten)
+    ); // Blended gradient colors
     border-radius: 25px;
-    color: $white;
-    font-size: 16px;
-    height: 50px;
-    width: $width;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    &:hover{
-      &::after{
-        opacity: 1;
-      }
-    }
-    &::after{
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      opacity: 0;
-      background: linear-gradient(lighten($secondary-color,$lighten), lighten($primary-color,$lighten));
-      border-radius: 25px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
-      transition: opacity .2s ease-in-out;
-    }
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35); // Deeper shadow for overlay
+    transition: opacity 0.2s ease-in-out; // Smooth hover effect
   }
+}
 
-  @mixin like{
-    position:relative;
-    opacity:1;
-    height: 20px;
-    transform-origin:bottom;
-    transform: scale(1) ;
-    transition: all 0.1s ease-in-out;
-  }
+@mixin like {
+  position: relative;
+  opacity: 1;
+  height: 20px;
+  transform-origin: bottom;
+  transform: scale(1);
+  transition: all 0.1s ease-in-out;
+}
 
-  @mixin liked{
-    position:absolute;
-    height:20px;
-    z-index: 1;
-    transform-origin:bottom;
-    opacity:0;
-    transform: scale(0.5);
-    transition: all 0.15s cubic-bezier(0,-0.01,.73,.99);
-  }
+@mixin liked {
+  position: absolute;
+  height: 20px;
+  z-index: 1;
+  transform-origin: bottom;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.15s cubic-bezier(0, -0.01, 0.73, 0.99);
+}
