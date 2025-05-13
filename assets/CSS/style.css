@@ -345,13 +345,16 @@ header .location__img {
   }
 }
 .card-how__icon--mobile {
-  height: 20px;
+  height: 19.9px;
+  width: 13.02px;
 }
 .card-how__icon--list {
-  height: 16px;
+  height: 15.92px;
+  width: 16px;
 }
 .card-how__icon--store {
-  height: 18px;
+  height: 17.91px;
+  width: 18px;
 }
 .card-how__number {
   position: absolute;
@@ -530,7 +533,8 @@ header .location__img {
 .card-restaurant-content__like {
   position: relative;
   opacity: 1;
-  height: 20px;
+  height: 21px;
+  width: 22px;
   transform-origin: bottom;
   transform: scale(1);
   transition: all 0.1s ease-in-out;
@@ -541,7 +545,8 @@ header .location__img {
 }
 .card-restaurant-content__liked {
   position: absolute;
-  height: 20px;
+  height: 21px;
+  width: 22px;
   z-index: 1;
   transform-origin: bottom;
   opacity: 0;
@@ -608,10 +613,17 @@ footer {
   color: #FFFFFF;
   align-items: center;
 }
-.footer-links a img {
+.footer-links a .icon-restaurant {
   -o-object-fit: none;
      object-fit: none;
   height: 13px;
+  width: 11px;
+}
+.footer-links a img .icon-partnership {
+  -o-object-fit: none;
+     object-fit: none;
+  height: 13px;
+  width: 12px;
 }
 .footer-links__container-one {
   display: flex;
@@ -732,7 +744,8 @@ header .header-logo a .back-arrow {
 .menu__title--icon-like {
   position: relative;
   opacity: 1;
-  height: 20px;
+  height: 21px;
+  width: 22px;
   transform-origin: bottom;
   transform: scale(1);
   transition: all 0.1s ease-in-out;
@@ -742,7 +755,8 @@ header .header-logo a .back-arrow {
 }
 .menu__title--icon-liked {
   position: absolute;
-  height: 20px;
+  height: 21px;
+  width: 22px;
   z-index: 1;
   transform-origin: bottom;
   opacity: 0;

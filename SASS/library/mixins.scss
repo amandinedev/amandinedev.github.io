@@ -39,7 +39,8 @@
 @mixin like {
   position: relative;
   opacity: 1;
-  height: 20px;
+  height: 21px;
+  width: 22px;
   transform-origin: bottom;
   transform: scale(1);
   transition: all 0.1s ease-in-out;
@@ -47,7 +48,8 @@
 
 @mixin liked {
   position: absolute;
-  height: 20px;
+  height: 21px;
+  width: 22px;
   z-index: 1;
   transform-origin: bottom;
   opacity: 0;

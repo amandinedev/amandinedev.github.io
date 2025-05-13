@@ -41,9 +41,15 @@ footer{
       gap: 9px;
       color: $white;
       align-items: center;
-      img{
+      .icon-restaurant{
         object-fit: none;
         height: 13px;
+        width: 11px;
+      }
+      img .icon-partnership{
+        object-fit: none;
+        height: 13px;
+        width: 12px;
       }
     }
     &__container-one{

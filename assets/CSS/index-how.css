@@ -1,0 +1,74 @@
+/*colors*/
+.how {
+  display: flex;
+  flex-direction: column;
+  padding: 0 17.5px;
+  gap: 25px;
+}
+@media (min-width: 768px) {
+  .how {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .how {
+    padding-right: 180px;
+    padding-left: 180px;
+  }
+}
+.how .section__title {
+  padding-top: 50px;
+}
+
+.cards-how {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 50px;
+  padding-left: 12px;
+}
+@media (min-width: 1024px) {
+  .cards-how {
+    flex-direction: row;
+  }
+}
+
+.card-how {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  height: 72.38px;
+  padding: 0 33px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 1024px) {
+  .card-how {
+    width: 33%;
+  }
+}
+.card-how__icon--mobile {
+  height: 19.9px;
+  width: 13.02px;
+}
+.card-how__icon--list {
+  height: 15.92px;
+  width: 16px;
+}
+.card-how__icon--store {
+  height: 17.91px;
+  width: 18px;
+}
+.card-how__number {
+  position: absolute;
+  left: -12px;
+  font-size: 14.18px;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  border-radius: 25px;
+  padding: 3.6px 8px;
+}/*# sourceMappingURL=index-how.css.map */
