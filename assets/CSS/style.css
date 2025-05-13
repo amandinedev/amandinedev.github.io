@@ -24,11 +24,11 @@ body {
   font-size: 30px;
 }
 .logo--white {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 18px;
 }
-.logo--pink {
-  font-size: 50px;
+.logo--loader {
+  font-size: 2em;
 }
 
 .section__title {
@@ -39,10 +39,10 @@ body {
 }
 
 .button--pink {
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(#FF79DA, #9356DC);
   border-style: none;
   border-radius: 25px;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 16px;
   height: 50px;
   width: 218px;
@@ -70,7 +70,7 @@ body {
 
 img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 a {
@@ -82,7 +82,7 @@ a {
 /****** loader ***********/
 /*colors*/
 .loader {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   position: fixed;
   top: 0;
   left: 0;
@@ -90,28 +90,33 @@ a {
   height: 100%;
   display: flex;
   justify-content: center;
-  border-right: 0px solid #99e2d0;
+  border-right: 0px solid #99E2D0;
   border-radius: 0 25px 25px 0;
   z-index: 2;
   opacity: 1;
   animation: panel 1s ease-in forwards 3s;
   /* Keyframes for main loader animation */
 }
+@media (min-width: 1024px) {
+  .loader .logo--loader {
+    font-size: 4em;
+  }
+}
 @keyframes panel {
   0% {
     opacity: 1;
     padding-right: 0px;
-    border-right: 2px solid #99e2d0;
+    border-right: 2px solid #99E2D0;
     transform: translateX(0vw);
   }
   50% {
-    border-right: 60px solid #99e2d0;
+    border-right: 60px solid #99E2D0;
   }
   100% {
     opacity: 1;
     left: -150px;
     padding-right: 40px;
-    border-right: 60px solid #99e2d0;
+    border-right: 60px solid #99E2D0;
     transform: translateX(-150vw);
   }
 }
@@ -155,8 +160,6 @@ a {
   align-content: center;
   position: absolute;
   padding-top: 350px;
-  padding-bottom: 10px;
-  height: 100px;
 }
 .text--animated .oh {
   display: inline;
@@ -177,20 +180,27 @@ a {
     transform: scale(0, 1);
   }
   to {
-    transform: scale(0.7, 1);
+    transform: scale(0.63, 1);
   }
 }
 .border-bottom--loading {
   display: flex;
   justify-content: center;
-  width: 269.35px;
-  height: 430px;
-  padding-top: 350px;
-  padding-bottom: 10px;
+  width: 173px;
+  height: 396px;
+  padding-top: 390px;
+  position: absolute;
   box-sizing: border-box;
-  border-bottom: 6px solid #99e2d0;
+  border-bottom: 3px solid #99E2D0;
   transform-origin: left;
   animation: border-loading 3.5s cubic-bezier(0, 0.37, 1, 0.33) forwards 0s;
+}
+@media (min-width: 1024px) {
+  .border-bottom--loading {
+    width: 343px;
+    height: 460px;
+    border-bottom: 6px solid #99E2D0;
+  }
 }
 
 /****** header ***********/
@@ -238,7 +248,7 @@ header .location {
   height: 50px;
   width: 100%;
   gap: 17px;
-  background-color: #eaeaea;
+  background-color: #EAEAEA;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -4px 4px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 768px) {
@@ -258,7 +268,7 @@ header .location__img {
   align-items: center;
   padding: 30px 20px 50px 20px;
   gap: 18px;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 @media (min-width: 1024px) {
   .intro {
@@ -324,7 +334,7 @@ header .location__img {
   align-items: center;
   position: relative;
   border-radius: 20px;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   height: 72.38px;
   padding: 0 33px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -347,8 +357,8 @@ header .location__img {
   position: absolute;
   left: -12px;
   font-size: 14.18px;
-  color: #ffffff;
-  background-color: #9356dc;
+  color: #FFFFFF;
+  background-color: #9356DC;
   border-radius: 25px;
   padding: 3.6px 8px;
 }
@@ -363,16 +373,21 @@ header .location__img {
   padding-left: 17.5px;
   padding-right: 17.5px;
   padding-bottom: 50px;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
+  /* Media query for screens >= 768px */
+  /* Media query for screens >= 1024px */
+  /* Media query for screens >= 1440px */
 }
 @media (min-width: 768px) {
   .restaurants {
+    /* Increase padding on both sides */
     padding-right: 50px;
     padding-left: 50px;
   }
 }
 @media (min-width: 1024px) {
   .restaurants {
+    /* Adjust gap and padding */
     gap: 28px;
     padding-right: 50px;
     padding-left: 50px;
@@ -384,28 +399,34 @@ header .location__img {
 }
 @media (min-width: 1440px) {
   .restaurants {
+    /* Increase padding significantly */
     padding-right: 180px;
     padding-left: 180px;
   }
 }
 .restaurants .cards-restaurants {
+  /* Initial flex layout */
   display: flex;
   flex-direction: column;
   gap: 18px;
+  /* Media query for screens >= 768px */
+  /* Media query for screens >= 1024px */
 }
 @media (min-width: 768px) {
   .restaurants .cards-restaurants {
+    /* Switch to row layout with wrapping */
     flex-direction: row;
     flex-wrap: wrap;
     -moz-column-gap: 8%;
-    column-gap: 8%;
+         column-gap: 8%;
   }
 }
 @media (min-width: 1024px) {
   .restaurants .cards-restaurants {
+    /* Adjust gap and column spacing */
     gap: 50px;
     -moz-column-gap: 10%;
-    column-gap: 10%;
+         column-gap: 10%;
   }
 }
 
@@ -416,21 +437,20 @@ header .location__img {
   height: 251px;
   width: 100%;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   text-decoration: none;
+  /* Media query for screens >= 768px */
+  /* Media query for screens >= 1024px */
 }
 @media (min-width: 768px) {
   .cards-restaurants a {
+    /* Adjust width for even distribution */
     width: 46%;
   }
 }
 @media (min-width: 1024px) {
   .cards-restaurants a {
-    width: 45%;
-  }
-}
-@media (min-width: 1440px) {
-  .cards-restaurants a {
+    /* Slightly adjust width */
     width: 45%;
   }
 }
@@ -455,24 +475,24 @@ header .location__img {
   padding: 7.5px;
   border-radius: 2px;
   color: #008766;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*images specific display*/
 .la-palette-du-gout .card-restaurant-img img {
   -o-object-position: center 62%;
-  object-position: center 62%;
+     object-position: center 62%;
 }
 
 .la-note-enchantee .card-restaurant-img img {
   -o-object-position: center 59%;
-  object-position: center 59%;
+     object-position: center 59%;
 }
 
 .a-la-francaise .card-restaurant-img img {
   -o-object-position: center 85%;
-  object-position: center 85%;
+     object-position: center 85%;
 }
 .a-la-francaise .card-restaurant-img__badge {
   display: none;
@@ -480,7 +500,7 @@ header .location__img {
 
 .le-delice-des-sens .card-restaurant-img img {
   -o-object-position: center 85%;
-  object-position: center 85%;
+     object-position: center 85%;
 }
 .le-delice-des-sens .card-restaurant-img__badge {
   display: none;
@@ -493,6 +513,7 @@ header .location__img {
   padding: 15px;
   align-items: center;
   box-sizing: border-box;
+  /* Like button functionality */
 }
 .card-restaurant-content-text {
   display: flex;
@@ -513,6 +534,7 @@ header .location__img {
   transform-origin: bottom;
   transform: scale(1);
   transition: all 0.1s ease-in-out;
+  /* State change on hover */
 }
 .card-restaurant-content__like:hover + .card-restaurant-content__liked {
   opacity: 0;
@@ -526,6 +548,7 @@ header .location__img {
   transform: scale(0.5);
   transition: all 0.15s cubic-bezier(0, -0.01, 0.73, 0.99);
   right: 15px;
+  /* State change on hover */
 }
 .card-restaurant-content__liked:hover {
   opacity: 1;
@@ -564,7 +587,7 @@ footer {
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
 }
 @media (min-width: 768px) {
   .footer-links {
@@ -582,12 +605,12 @@ footer {
 .footer-links a {
   display: flex;
   gap: 9px;
-  color: #ffffff;
+  color: #FFFFFF;
   align-items: center;
 }
 .footer-links a img {
   -o-object-fit: none;
-  object-fit: none;
+     object-fit: none;
   height: 13px;
 }
 .footer-links__container-one {
@@ -603,7 +626,7 @@ footer {
 .footer-links__container-two {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
 }
 @media (min-width: 768px) {
   .footer-links__container-two {
@@ -631,6 +654,7 @@ header .header-logo a .back-arrow {
 .menu-intro__img {
   height: 275px;
   width: 100%;
+  /* Media query for screens >= 768px */
 }
 @media (min-width: 768px) {
   .menu-intro__img {
@@ -641,22 +665,22 @@ header .header-logo a .back-arrow {
 /*images specific display*/
 .la-palette-du-gout {
   -o-object-position: center 58%;
-  object-position: center 58%;
+     object-position: center 58%;
 }
 
 .la-note-enchantee {
   -o-object-position: center 60%;
-  object-position: center 60%;
+     object-position: center 60%;
 }
 
 .a-la-francaise {
   -o-object-position: center 67%;
-  object-position: center 67%;
+     object-position: center 67%;
 }
 
 .le-delice-des-sens {
   -o-object-position: center 79%;
-  object-position: center 79%;
+     object-position: center 79%;
 }
 
 .menu {
@@ -664,7 +688,7 @@ header .header-logo a .back-arrow {
   top: 298px;
   left: 0;
   right: 0;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   display: flex;
   flex-direction: column;
@@ -676,6 +700,8 @@ header .header-logo a .back-arrow {
   justify-content: center;
   width: 100%;
   margin: auto;
+  /* Media query for screens >= 768px */
+  /* Media query for screens >= 1055px */
 }
 @media (min-width: 768px) {
   .menu {
@@ -723,6 +749,7 @@ header .header-logo a .back-arrow {
   transform: scale(0.5);
   transition: all 0.15s cubic-bezier(0, -0.01, 0.73, 0.99);
   transform: scale(0.5);
+  /* Media query for screens >= 768px */
 }
 .menu__title--icon-liked:hover {
   opacity: 1;
@@ -735,7 +762,7 @@ header .header-logo a .back-arrow {
 .menu__subtitle--green-underline {
   font-weight: 300;
   font-size: 16px;
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid #99E2D0;
 }
 .menu__subsection {
   display: flex;
@@ -752,7 +779,7 @@ header .header-logo a .back-arrow {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 15.04px;
   height: 69px;
   min-width: 349px;
@@ -798,7 +825,7 @@ header .header-logo a .back-arrow {
   opacity: 0;
   transform: translateX(60px);
   transition: all 0.3s ease-in-out 0.2s;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   padding: 24.5px 19.5px;
   box-sizing: border-box;
   border-radius: 0 14.05px 14.05px 0;
@@ -814,6 +841,7 @@ header .header-logo a .back-arrow {
   transform: translateX(0px);
 }
 
+/* Animations for menu items */
 @keyframes slideInX {
   from {
     transform: translateX(-100%) scale(0, 1);
@@ -921,4 +949,4 @@ header .header-logo a .back-arrow {
 
 .footer-la-note-enchantee {
   bottom: -1134.2px;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

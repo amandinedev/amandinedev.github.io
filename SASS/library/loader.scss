@@ -15,6 +15,12 @@
   opacity: 1;
   animation: panel 1s ease-in forwards 3s;
 
+  .logo--loader{
+    @media (min-width: 1024px) {
+      font-size: 4em;
+  }
+}
+
   /* Keyframes for main loader animation */
   @keyframes panel {
     0% {
@@ -77,8 +83,6 @@
   align-content: center;
   position: absolute;
   padding-top: 350px;
-  padding-bottom: 10px;
-  height: 100px;
 
   .oh {
     display: inline;
@@ -100,19 +104,24 @@
     transform: scale(0, 1);
   }
   to {
-    transform: scale(0.7, 1);
+    transform: scale(0.63, 1);
   }
 }
 
 .border-bottom--loading {
   display: flex;
   justify-content: center;
-  width: 269.35px;
-  height: 430px;
-  padding-top: 350px;
-  padding-bottom: 10px;
+  width: 173px;
+  height: 396px;
+  padding-top: 390px;
+  position: absolute;
   box-sizing: border-box;
-  border-bottom: 6px solid $tertiary-color;
+  border-bottom: 3px solid $tertiary-color;
   transform-origin: left;
   animation: border-loading 3.5s cubic-bezier(0, 0.37, 1, 0.33) forwards 0s;
+  @media (min-width: 1024px) {
+    width: 343px;
+    height: 460px;
+    border-bottom: 6px solid $tertiary-color;
+  }
 }

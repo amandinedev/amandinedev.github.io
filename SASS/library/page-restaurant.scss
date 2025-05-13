@@ -22,6 +22,7 @@ header {
 .menu-intro__img {
   height: 275px;
   width: 100%;
+  /* Media query for screens >= 768px */
   @media (min-width: 768px) {
     height: 383px;
   }
@@ -58,9 +59,11 @@ header {
   justify-content: center;
   width: 100%;
   margin: auto;
+  /* Media query for screens >= 768px */
   @media (min-width: 768px) {
     top: 439.34px;
   }
+  /* Media query for screens >= 1055px */
   @media (min-width: 1055px) {
     width: 1055px;
   }
@@ -88,6 +91,7 @@ header {
       &-liked {
         @include liked;
         transform: scale(0.5);
+        /* Media query for screens >= 768px */
         @media (min-width: 768px) {
         }
         &:hover {
@@ -114,8 +118,6 @@ header {
     box-sizing: border-box;
     max-width: 664px;
     width: 100%;
-    @media (min-width: 1024px) {
-    }
   }
   &__card {
     display: flex;
