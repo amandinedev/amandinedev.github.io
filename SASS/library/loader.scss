@@ -25,7 +25,6 @@
   @keyframes panel {
     0% {
       opacity: 1;
-      padding-right: 0px;
       border-right: 2px solid $tertiary-color;
       transform: translateX(0vw);
     }
@@ -34,8 +33,6 @@
     }
     100% {
       opacity: 1;
-      left: -150px;
-      padding-right: 40px;
       border-right: 60px solid $tertiary-color;
       transform: translateX(-150vw);
     }
@@ -83,6 +80,7 @@
   align-content: center;
   position: absolute;
   padding-top: 350px;
+  box-sizing: border-box;
 
   .oh {
     display: inline;
@@ -104,7 +102,7 @@
     transform: scale(0, 1);
   }
   to {
-    transform: scale(0.63, 1);
+    transform: scale(0.62, 1);
   }
 }
 

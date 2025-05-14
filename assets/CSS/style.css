@@ -105,7 +105,6 @@ a {
 @keyframes panel {
   0% {
     opacity: 1;
-    padding-right: 0px;
     border-right: 2px solid #99E2D0;
     transform: translateX(0vw);
   }
@@ -114,8 +113,6 @@ a {
   }
   100% {
     opacity: 1;
-    left: -150px;
-    padding-right: 40px;
     border-right: 60px solid #99E2D0;
     transform: translateX(-150vw);
   }
@@ -160,6 +157,7 @@ a {
   align-content: center;
   position: absolute;
   padding-top: 350px;
+  box-sizing: border-box;
 }
 .text--animated .oh {
   display: inline;
@@ -180,7 +178,7 @@ a {
     transform: scale(0, 1);
   }
   to {
-    transform: scale(0.63, 1);
+    transform: scale(0.62, 1);
   }
 }
 .border-bottom--loading {

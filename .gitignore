@@ -1,3 +1,12 @@
 *.map
 *.vscode
 *.json
+colors.css
+footer.css
+header.css
+index-how.css
+index-intro.css
+index-restaurants.css
+loader.css
+mixins.css
+page-restaurant.css
