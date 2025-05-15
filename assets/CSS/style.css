@@ -127,14 +127,6 @@ a {
     transform: translateY(-30px);
   }
 }
-@keyframes animate-oh-border {
-  from {
-    border-bottom: 2px;
-  }
-  to {
-    border-bottom: 20px;
-  }
-}
 @keyframes animate-my {
   from {
     transform: translateY(0);
