@@ -109,11 +109,10 @@ a {
     transform: translateX(0vw);
   }
   50% {
-    opacity: 1;
     border-right: 60px solid #99E2D0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
     border-right: 60px solid #99E2D0;
     transform: translateX(-150vw);
   }
