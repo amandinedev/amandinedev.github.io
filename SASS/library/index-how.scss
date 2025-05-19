@@ -1,4 +1,6 @@
 @import 'colors.scss';
+@import 'functions.scss';
+
 
 .how{
     display: flex;
@@ -57,7 +59,7 @@
       &__number{
         position:absolute;
         left:-12px;
-        font-size: 14.18px;
+        font-size: rem(14.18);
         color: $white;
         background-color: $primary-color;
         border-radius: 25px;
