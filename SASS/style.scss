@@ -20,7 +20,7 @@ html{
 body {
   justify-content: center;
   width: 100%;
-  max-width: 1440px;
+  max-width: rem(1440);
 }
 
 .logo {
@@ -34,7 +34,7 @@ body {
     font-size: rem(18);
   }
   &--loader {
-    font-size: 2em;
+    font-size: rem(32);
   }
 }
 
@@ -42,11 +42,11 @@ body {
   color: $dark;
   font-size: rem(24);
   font-weight: 700;
-  padding-top: 50px;
+  padding-top: em(50);
 }
 
 .button--pink {
-  @include pink-button-mixin($width: 218px, $lighten: 7);
+  @include pink-button-mixin($width: rem(218), $lighten: 7);
 }
 
 img {

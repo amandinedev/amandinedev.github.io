@@ -5,16 +5,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px 50px 20px;
-  gap: 18px;
+  padding: em(30) em(20) em(50) em(20);
+  gap: em(18);
   background-color: $main-bg-color;
-  @media (min-width: 1024px) {
-    padding-bottom: 30px;
+  @media (min-width: rem(1024)) {
+    padding-bottom: em(30);
   }
   &__title {
     text-align: center;
-    padding: 0px 10%;
-    @media (min-width: 1024px) {
+    padding: em(0) 10%;
+    @media (min-width: rem(1024)) {
       font-size: rem(40);
     }
   }

@@ -4,67 +4,67 @@ footer{
   background-color: $footer-bg-color;
   display: flex;
   flex-direction: column;
-  padding:22px 25px;
+  padding:em(22) em(25);
   box-sizing: border-box;
-  gap: 16px;
-  @media (min-width: 768px){
+  gap: em(16);
+  @media (min-width: rem(768)){
     flex-direction: row-reverse;
     align-items: center;
-    height: 114px;
+    height: em(114);
     justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    gap:20px;
+    padding-top: em(50);
+    padding-bottom: em(30);
+    gap:em(20);
   }
-  @media (min-width: 1024px){
+  @media (min-width: rem(1024)){
     justify-content: flex-start;
-    gap: 100px;
-    padding: 50px 90px 30px 30px;
+    gap: em(100);
+    padding: em(50) em(90) em(30) em(30);
   }
 }
   
   .footer-links{
     display: flex;
     flex-direction: column;
-    gap: 9px;
-    @media (min-width: 768px){
+    gap: em(9);
+    @media (min-width: rem(768)){
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: em(20);
     }
-    @media (min-width: 1024px){
-    gap: 50px;
+    @media (min-width: rem(1024)){
+    gap: em(50);
     }
     a{
       display: flex;
-      gap: 9px;
+      gap: em(9);
       color: $white;
       align-items: center;
       .icon-restaurant{
         object-fit: none;
-        height: 13px;
-        width: 11px;
+        height: em(13);
+        width: em(11);
       }
       img .icon-partnership{
         object-fit: none;
-        height: 13px;
-        width: 12px;
+        height: em(13);
+        width: em(12);
       }
     }
     &__container-one{
       display: flex;
       flex-direction: column;
-      gap: 9px;
-      @media (min-width: 768px){
+      gap: em(9);
+      @media (min-width: rem(768)){
         flex-direction: row;
       }
     }
     &__container-two{
       display: flex;
       flex-direction: column;
-      gap: 9px;
-      @media (min-width: 768px){
+      gap: em(9);
+      @media (min-width: rem(768)){
         flex-direction: row;
       }
       a{

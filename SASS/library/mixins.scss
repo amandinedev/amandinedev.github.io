@@ -2,13 +2,13 @@
 @import "functions.scss";
 
 /****** mixins ***********/
-@mixin pink-button-mixin($width: 218px, $lighten: 7) {
+@mixin pink-button-mixin($width: rem(218), $lighten: 7) {
   background: $gradient-pink;
   border-style: none;
-  border-radius: 25px;
+  border-radius: em(25);
   color: $white;
   font-size: rem(16);
-  height: 50px;
+  height: em(50);
   width: $width;
   position: relative;
   z-index: 1;
@@ -33,8 +33,8 @@
       lighten($secondary-color, $lighten),
       lighten($primary-color, $lighten)
     ); // Blended gradient colors
-    border-radius: 25px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35); // Deeper shadow for overlay
+    border-radius: em(25);
+    box-shadow: 0 em(5) em(10) rgba(0, 0, 0, 0.35); // Deeper shadow for overlay
     transition: opacity 0.2s ease-in-out; // Smooth hover effect
   }
 }
@@ -42,8 +42,8 @@
 @mixin like {
   position: relative;
   opacity: 1;
-  height: 21px;
-  width: 22px;
+  height: em(21);
+  width: em(22);
   transform-origin: bottom;
   transform: scale(1);
   transition: all 0.1s ease-in-out;
@@ -51,8 +51,8 @@
 
 @mixin liked {
   position: absolute;
-  height: 21px;
-  width: 22px;
+  height: em(21);
+  width: em(22);
   z-index: 1;
   transform-origin: bottom;
   opacity: 0;

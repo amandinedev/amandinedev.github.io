@@ -3,8 +3,8 @@
 @import "functions.scss";
 
 body {
-  min-height: 1056px;
-  max-width: 1440px;
+  min-height: rem(1056);
+  max-width: rem(1440);
   margin: auto;
   justify-content: center;
 }
@@ -21,11 +21,11 @@ header {
 
 // Image sizing with media query
 .menu-intro__img {
-  height: 275px;
+  height: em(275);
   width: 100%;
   /* Media query for screens >= 768px */
-  @media (min-width: 768px) {
-    height: 383px;
+  @media (min-width: rem(768)) {
+    height: em(383);
   }
 }
 
@@ -45,28 +45,28 @@ header {
 
 .menu {
   position: absolute;
-  top: 298px;
+  top: em(298);
   left: 0;
   right: 0;
   background-color: $main-bg-color;
-  border-radius: 40px 40px 0 0;
+  border-radius: em(40) em(40) 0 0;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: em(40);
+  padding-bottom: em(40);
   box-sizing: border-box;
-  gap: 40px;
+  gap: em(40);
   align-items: center;
   justify-content: center;
   width: 100%;
   margin: auto;
   /* Media query for screens >= 768px */
-  @media (min-width: 768px) {
-    top: 439.34px;
+  @media (min-width: rem(768)) {
+    top: em(439.34);
   }
   /* Media query for screens >= 1055px */
-  @media (min-width: 1055px) {
-    width: 1055px;
+  @media (min-width: rem(1055)) {
+    width: em(1055);
   }
 
   &__title {
@@ -74,7 +74,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: em(20);
     &--text {
       font-family: shrikhand, sans-serif;
       font-size: rem(28);
@@ -93,7 +93,7 @@ header {
         @include liked;
         transform: scale(0.5);
         /* Media query for screens >= 768px */
-        @media (min-width: 768px) {
+        @media (min-width: rem(768)) {
         }
         &:hover {
           opacity: 1;
@@ -108,16 +108,16 @@ header {
     &--green-underline {
       font-weight: 300;
       font-size: rem(16);
-      border-bottom: 3px solid $tertiary-color;
+      border-bottom: em(3) solid $tertiary-color;
     }
   }
   &__subsection {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 0 10px;
+    gap: em(10);
+    padding: 0 em(10);
     box-sizing: border-box;
-    max-width: 664px;
+    max-width: em(664);
     width: 100%;
   }
   &__card {
@@ -127,17 +127,17 @@ header {
     align-items: center;
     position: relative;
     background-color: $white;
-    border-radius: 15.04px;
-    height: 69px;
-    min-width: 349px;
+    border-radius: em(15.04);
+    height: em(69);
+    min-width: em(349);
     overflow: hidden;
     box-sizing: border-box;
-    box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 em(4.01) em(15.04) rgba(0, 0, 0, 0.1);
     &-content-txt {
       display: flex;
       flex-direction: column;
-      padding: 15px 0 15px 15px;
-      gap: 5px;
+      padding: em(15) 0 em(15) em(15);
+      gap: em(5);
       box-sizing: border-box;
       width: 100%;
       transition: all 0.3s ease-in-out 0.1s;
@@ -156,36 +156,37 @@ header {
       }
     }
     &-price {
-      padding-top: 27.2px;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-top: em(27.2);
+      padding-left: em(15);
+      padding-right: em(15);
       position: absolute;
       z-index: 0;
-      right: 0px;
+      right: em(0);
       transition: all 0.3s ease-in-out 0.2s;
     }
     &-icon {
       position: absolute;
       z-index: 0;
-      right: 0px;
+      height: em(69);
+      right: em(0);
       opacity: 0;
-      transform: translateX(60px);
+      transform: translateX(em(60));
       transition: all 0.3s ease-in-out 0.2s;
       background-color: $tertiary-color;
-      padding: 24.5px 19.5px;
+      padding: em(24.5) em(19.5);
       box-sizing: border-box;
-      border-radius: 0 14.05px 14.05px 0;
+      border-radius: 0 em(14.05) em(14.05) 0;
     }
     &:hover {
       .menu__card-content-txt {
         width: 69%;
       }
       .menu__card-price {
-        transform: translateX(-60px);
+        transform: translateX(em(-60));
       }
       .menu__card-icon {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(em(0));
       }
     }
   }
@@ -295,11 +296,11 @@ header {
 // Footer positioning
 .footer-restaurant {
   position: relative;
-  left: 0px;
-  right: 0px;
-  bottom: -1056px;
+  left: em(0);
+  right: em(0);
+  bottom: em(-1056);
 }
 
 .footer-la-note-enchantee {
-  bottom: -1134.2px;
+  bottom: em(-1134.2);
 }

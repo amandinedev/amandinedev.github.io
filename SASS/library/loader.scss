@@ -10,14 +10,14 @@
   display: flex;
   justify-content: center;
   border-right: 0px solid $tertiary-color;
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 rem(25) rem(25) 0;
   z-index: 2;
   opacity: 1;
   animation: panel 1s ease-in forwards 3s;
 
   .logo--loader{
-    @media (min-width: 1024px) {
-      font-size: 4em;
+    @media (min-width: rem(1024)) {
+      font-size: rem(64);
   }
 }
 
@@ -25,15 +25,15 @@
   @keyframes panel {
     0% {
       opacity: 1;
-      border-right: 2px solid $tertiary-color;
+      border-right: rem(2) solid $tertiary-color;
       transform: translateX(0vw);
     }
     50% {
-      border-right: 60px solid $tertiary-color;
+      border-right: rem(60) solid $tertiary-color;
     }
     100% {
       opacity: 1;
-      border-right: 60px solid $tertiary-color;
+      border-right: rem(60) solid $tertiary-color;
       transform: translateX(-150vw);
     }
   }
@@ -45,7 +45,7 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(-30px);
+    transform: translateY(rem(-30));
   }
 }
 @keyframes animate-my {
@@ -53,7 +53,7 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(-40px);
+    transform: translateY(rem(-40));
   }
 }
 @keyframes animate-food {
@@ -61,7 +61,7 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(-30px);
+    transform: translateY(rem(-30));
   }
 }
 
@@ -70,7 +70,7 @@
   display: flex;
   align-content: center;
   position: absolute;
-  padding-top: 350px;
+  padding-top: rem(350);
   box-sizing: border-box;
 
   .oh {
@@ -100,17 +100,17 @@
 .border-bottom--loading {
   display: flex;
   justify-content: center;
-  width: 173px;
-  height: 396px;
-  padding-top: 390px;
+  width: rem(173);
+  height: rem(396);
+  padding-top: rem(390);
   position: absolute;
   box-sizing: border-box;
-  border-bottom: 3px solid $tertiary-color;
+  border-bottom: rem(3) solid $tertiary-color;
   transform-origin: left;
   animation: border-loading 3.5s cubic-bezier(0, 0.37, 1, 0.33) forwards 0s;
-  @media (min-width: 1024px) {
-    width: 343px;
-    height: 460px;
-    border-bottom: 6px solid $tertiary-color;
+  @media (min-width: rem(1024)) {
+    width: rem(343);
+    height: rem(460);
+    border-bottom: rem(6) solid $tertiary-color;
   }
 }

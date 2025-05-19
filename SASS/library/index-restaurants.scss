@@ -5,52 +5,52 @@
 .restaurants {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding-left: 17.5px;
-  padding-right: 17.5px;
-  padding-bottom: 50px;
+  gap: em(16);
+  padding-left: em(17.5);
+  padding-right: em(17.5);
+  padding-bottom: em(50);
   background-color: $main-bg-color;
 
   /* Media query for screens >= 768px */
-  @media (min-width: 768px) {
+  @media (min-width: rem(768)) {
     /* Increase padding on both sides */
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: em(50);
+    padding-left: em(50);
   }
 
   /* Media query for screens >= 1024px */
-  @media (min-width: 1024px) {
+  @media (min-width: rem(1024)) {
     /* Adjust gap and padding */
     .section__title {
-      padding-top: 30px;
+      padding-top: em(30);
     }
-    gap: 28px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 30px;
+    gap: em(28);
+    padding-right: em(50);
+    padding-left: em(50);
+    padding-bottom: em(30);
   }
   /* Media query for screens >= 1440px */
-  @media (min-width: 1440px) {
+  @media (min-width: rem(1440)) {
     /* Increase padding significantly */
-    padding-right: 180px;
-    padding-left: 180px;
+    padding-right: em(180);
+    padding-left: em(180);
   }
   .cards-restaurants {
     /* Initial flex layout */
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: em(18);
      /* Media query for screens >= 768px */
-    @media (min-width: 768px) {
+    @media (min-width: rem(768)) {
       /* Switch to row layout with wrapping */
       flex-direction: row;
       flex-wrap: wrap;
       column-gap: 8%;
     }
     /* Media query for screens >= 1024px */
-    @media (min-width: 1024px) {
+    @media (min-width: rem(1024)) {
       /* Adjust gap and column spacing */
-      gap: 50px;
+      gap: em(50);
       column-gap: 10%;
     }
   }
@@ -60,18 +60,18 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 251px;
+  height: em(251);
   width: 100%;
-  border-radius: 15px;
+  border-radius: em(15);
   background-color: $white;
   text-decoration: none;
   /* Media query for screens >= 768px */
-  @media (min-width: 768px) {
+  @media (min-width: rem(768)) {
     /* Adjust width for even distribution */
     width: 46%;
   }
   /* Media query for screens >= 1024px */
-  @media (min-width: 1024px) {
+  @media (min-width: rem(1024)) {
      /* Slightly adjust width */
     width: 45%;
   }
@@ -82,21 +82,21 @@
     &__img {
       position: relative;
       width: 100%;
-      height: 177px;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      height: em(177);
+      border-top-left-radius: em(15);
+      border-top-right-radius: em(15);
     }
     &__badge {
       position: absolute;
-      right: 16px;
-      top: 16px;
+      right: em(16);
+      top: em(16);
       z-index: 1;
-      font-size: rem(14);
-      padding: 7.5px;
-      border-radius: 2px;
+      font-size: em(14);
+      padding: em(7.5);
+      border-radius: em(2);
       color: $tertiary-darken-color;
       background-color: $tertiary-color;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 em(2) em(4) rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -131,18 +131,18 @@
   display: flex;
   justify-content: space-between;
   height: 30%;
-  padding: 15px;
+  padding: em(15);
   align-items: center;
   box-sizing: border-box;
   &-text {
     display: flex;
     flex-direction: column;
     &__title {
-      font-size: rem(18);
+      font-size: em(18);
       font-weight: 700;
     }
     &__subtitle {
-      font-size: rem(17);
+      font-size: em(17);
       font-weight: 300;
     }
   }
@@ -157,7 +157,7 @@
   }
   &__liked {
     @include liked;
-    right: 15px;
+    right: rem(15);
     /* State change on hover */
     &:hover {
       opacity: 1;

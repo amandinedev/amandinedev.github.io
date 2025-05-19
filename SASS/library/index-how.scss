@@ -5,27 +5,27 @@
 .how{
     display: flex;
     flex-direction: column;
-    padding: 0 17.5px;
-    gap: 25px;
-    @media (min-width: 768px){
-      padding-right: 50px;
-      padding-left: 50px;
+    padding: 0 em(17.5);
+    gap: em(25);
+    @media (min-width: rem(768)){
+      padding-right: em(50);
+      padding-left: em(50);
     }
-    @media (min-width: 1440px){
-      padding-right: 180px;
-      padding-left: 180px;
+    @media (min-width: rem(1440)){
+      padding-right: em(180);
+      padding-left: em(180);
     }
   .section__title{
-    padding-top: 50px;
+    padding-top: em(50);
   }
 }
   .cards-how{
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    padding-bottom: 50px;
-    padding-left: 12px;
-    @media (min-width: 1024px){
+    gap: em(24);
+    padding-bottom: em(50);
+    padding-left: em(12);
+    @media (min-width: rem(1024)){
       flex-direction: row;
     }
     }
@@ -33,36 +33,36 @@
     .card-how{
       display: flex;
       justify-content: flex-start;
-      gap: 30px;
+      gap: em(30);
       align-items: center;
       position: relative;
-      border-radius: 20px;
+      border-radius: em(20);
       background-color: $main-bg-color;
-      height: 72.38px;
-      padding: 0 33px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-      @media (min-width: 1024px){
+      height: em(72.38);
+      padding: 0 em(33);
+      box-shadow: 0 em(4) em(15) rgba(0, 0, 0, 0.15);
+      @media (min-width: rem(1024)){
         width: 33%;
       }
       &__icon--mobile{
-          height: 19.9px;
-          width: 13.02px;
+          height: em(19.9);
+          width: em(13.02);
         }
       &__icon--list{
-          height: 15.92px;
-          width: 16px;
+          height: em(15.92);
+          width: em(16);
         }
       &__icon--store{
-          height: 17.91px;
-          width: 18px;
+          height: em(17.91);
+          width: em(18);
         }
       &__number{
         position:absolute;
-        left:-12px;
+        left:em(-12);
         font-size: rem(14.18);
         color: $white;
         background-color: $primary-color;
-        border-radius: 25px;
-        padding: 3.6px 8px;
+        border-radius: em(25);
+        padding: em(3.6) em(8);
       }
     }
