@@ -29,11 +29,10 @@
       transform: translateX(0vw);
     }
     50% {
-      opacity: 1;
       border-right: 60px solid $tertiary-color;
     }
     100% {
-      opacity: 0;
+      opacity: 1;
       border-right: 60px solid $tertiary-color;
       transform: translateX(-150vw);
     }
