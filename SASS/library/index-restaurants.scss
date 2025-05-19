@@ -1,5 +1,6 @@
 @import "colors.scss";
 @import "mixins.scss";
+@import "functions.scss";
 
 .restaurants {
   display: flex;
@@ -90,7 +91,7 @@
       right: 16px;
       top: 16px;
       z-index: 1;
-      font-size: 14px;
+      font-size: rem(14);
       padding: 7.5px;
       border-radius: 2px;
       color: $tertiary-darken-color;
@@ -137,11 +138,11 @@
     display: flex;
     flex-direction: column;
     &__title {
-      font-size: 18px;
+      font-size: rem(18);
       font-weight: 700;
     }
     &__subtitle {
-      font-size: 17px;
+      font-size: rem(17);
       font-weight: 300;
     }
   }

@@ -9,8 +9,14 @@
 /****** variables ***********/
 @import "./library/colors.scss";
 @import "./library/mixins.scss";
+@import "./library/functions.scss";
 
 /****** elements ***********/
+
+html{
+  font-size: $base-font-size px; //font-size definition in functions.scss
+}
+
 body {
   justify-content: center;
   width: 100%;
@@ -21,11 +27,11 @@ body {
   font-family: Shrikhand, serif;
   &--black {
     color: $dark;
-    font-size: 30px;
+    font-size: rem(30);
   }
   &--white {
     color: $white;
-    font-size: 18px;
+    font-size: rem(18);
   }
   &--loader {
     font-size: 2em;
@@ -34,7 +40,7 @@ body {
 
 .section__title {
   color: $dark;
-  font-size: 24px;
+  font-size: rem(24);
   font-weight: 700;
   padding-top: 50px;
 }

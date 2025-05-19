@@ -1,10 +1,13 @@
+@import "colors.scss";
+@import "functions.scss";
+
 /****** mixins ***********/
 @mixin pink-button-mixin($width: 218px, $lighten: 7) {
   background: $gradient-pink;
   border-style: none;
   border-radius: 25px;
   color: $white;
-  font-size: 16px;
+  font-size: rem(16);
   height: 50px;
   width: $width;
   position: relative;
