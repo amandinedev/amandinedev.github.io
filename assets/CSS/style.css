@@ -484,8 +484,8 @@ header .location__img {
 }
 
 .a-la-francaise .card-restaurant-img img {
-  -o-object-position: center 85%;
-     object-position: center 85%;
+  -o-object-position: center 66%;
+     object-position: center 66%;
 }
 .a-la-francaise .card-restaurant-img__badge {
   display: none;
